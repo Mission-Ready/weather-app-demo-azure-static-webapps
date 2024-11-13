@@ -2,15 +2,13 @@ const cityInput = document.getElementById("input");
 const dispalySection = document.getElementById("display");
 
 
-const API_KEY = "650ad8fb3c6e4ecab3190253232706";
+const API_KEY = "6e1f2077f7f349d1b83121648240110";
 
 const handleClick = () => {
   let currentCity = cityInput.value;
 
   const getWeather = fetch(
-    `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${
-      currentCity || "London"
-    }&aqi=no`
+    `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${currentCity || "London"}&aqi=no`
   )
     .then((res) => res.json())
     .then((data) => {
